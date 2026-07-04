@@ -1,0 +1,198 @@
+/* Custom Light Design Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --primary: #4f46e5;
+    --primary-light: #e0e7ff;
+    --border-color: #e2e8f0;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Header Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 10%;
+    background: rgba(255, 255, 255, 0.85);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li { margin: 0 15px; }
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+nav ul li a:hover { color: var(--primary); }
+
+.btn-nav {
+    padding: 8px 18px;
+    background: var(--primary-light);
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.btn-nav:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Hero Section */
+.hero {
+    padding: 120px 10% 80px 10%;
+    background: linear-gradient(180deg, var(--primary-light) 0%, var(--bg-light) 100%);
+    text-align: center;
+}
+
+.badge {
+    background: var(--white);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--primary);
+    border: 1px solid var(--border-color);
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-top: 15px;
+    letter-spacing: -1px;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 20px auto 30px auto;
+    font-size: 1.2rem;
+}
+
+.hero-btns a {
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+/* About Section */
+.about {
+    padding: 60px 10%;
+    background: var(--white);
+}
+
+.about-content { max-width: 800px; margin: 0 auto; text-align: center;}
+.about-content h2 { font-size: 2.2rem; margin-bottom: 15px; }
+.about-content p { color: var(--text-muted); font-size: 1.1rem; }
+
+.stats { display: flex; justify-content: center; gap: 40px; margin-top: 30px; }
+.stat-box { background: var(--bg-light); padding: 20px; border-radius: 8px; width: 150px; border: 1px solid var(--border-color); }
+.stat-box h3 { color: var(--primary); font-size: 1.8rem; }
+
+/* Grid Cards Configuration */
+.services, .pricing, .contact { padding: 80px 10%; }
+.section-title { text-align: center; margin-bottom: 40px; }
+.section-title h2 { font-size: 2.2rem; }
+.section-title p { color: var(--text-muted); }
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.service-card, .price-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 280px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+}
+
+.s-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
+.service-card h3 { margin-bottom: 10px; }
+.service-card p { color: var(--text-muted); }
+
+/* Pricing Cards */
+.price-card { text-align: center; }
+.price-card h4 { font-size: 1.3rem; color: var(--text-muted); }
+.price .price-card { font-size: 2.5rem; font-weight: bold; margin: 15px 0; }
+.price-card ul { list-style: none; margin: 20px 0; color: var(--text-muted); }
+.price-card ul li { margin: 10px 0; }
+.price-card.featured { border-color: var(--primary); box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.1); }
+
+/* Forms UI */
+.main-form { background: var(--white); padding: 40px; border-radius: 12px; max-width: 700px; margin: 0 auto; border: 1px solid var(--border-color); }
+.form-row { display: flex; gap: 15px; margin-bottom: 15px; }
+.main-form input, .main-form textarea { width: 100%; padding: 14px; border: 1px solid var(--border-color); border-radius: 6px; outline: none; margin-bottom: 15px; background: var(--bg-light); }
+.main-form input:focus, .main-form textarea:focus { border-color: var(--primary); background: var(--white); }
+.form-btn { width: 100%; border: none; cursor: pointer; font-size: 1rem; font-weight: bold; }
+
+/* Footer */
+footer { text-align: center; padding: 40px; background: var(--white); border-top: 1px solid var(--border-color); color: var(--text-muted); }
+
+@media(max-width:768px) {
+    header { padding: 15px 5%; }
+    nav { display: none; }
+    .hero h1 { font-size: 2.2rem; }
+    .form-row { flex-direction: column; gap: 0; }
+}
